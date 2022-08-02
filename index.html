@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="index.js"></script> -->
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <div>
+        <button onclick="addClick()">+</button>
+        <span id="totalClicks"> </span>
+        <button onclick="removeClick()">-</button>
+    </div> -->
+    <div>
+        <button onclick="Click(1)">+</button>
+        <span id="totalClicks"> 0 </span>
+        <button onclick="Click(-1)">-</button>
+    </div>
+
+
+
+    <script>
+
+        
+        function Click(e){
+            var totalClicks = document.getElementById('totalClicks');
+            // var value = 0
+            // totalClicks = value;
+            const newValue =  parseInt(totalClicks.innerText) + e 
+            console.log(totalClicks);
+            totalClicks.innerText = newValue;
+            console.log(newValue);
+
+            if (totalClicks.innerText < 0) {
+                 totalClicks.innerText = 0;
+            }
+        }
+
+
+
+        // var totalClicks = document.getElementById('totalClicks');
+        // var value = 0
+        // totalClicks.innerHTML = value;
+
+
+        // // const newValue = 0
+        // function addClick() {
+        //     let newValue = value++
+        //     console.log(newValue);
+        //     totalClicks.innerHTML = newValue;
+        // }
+        // function removeClick() {
+        //     if (value <= 0) {
+        //         let newValue = 0
+        //     } else {
+
+        //         let newValue = (value--) - 1
+        //         console.log(newValue);
+        //         totalClicks.innerHTML = newValue;
+        //     }
+
+        // }
+
+    </script>
+</body>
+
+</html>
